@@ -2,3 +2,6 @@
   - toggle
   - Single Selection
   - Multiple Selection
+- Random color Project
+  - HEX
+  - RGB
