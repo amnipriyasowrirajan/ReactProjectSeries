@@ -5,3 +5,4 @@
 - Random color Project
   - HEX
   - RGB
+- Star Rating
