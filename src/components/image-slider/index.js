@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { BsArrowLeftCircleFill, BsArrowRightCircleFill } from "react-icons/bs";
 import "./styles.css";
 
@@ -26,7 +26,6 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
   function handlePrevious() {
     setCurrentSlide(currentSlide === 0 ? images.length - 1 : currentSlide - 1);
   }
-
   function handleNext() {
     setCurrentSlide(currentSlide === images.length - 1 ? 0 : currentSlide + 1);
   }
@@ -34,15 +33,13 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
   useEffect(() => {
     if (url !== "") fetchImages(url);
   }, [url]);
-
+  console.log(images);
   if (loading) {
-    return <div>Loading Data! Please wait</div>;
+    return <div>Loading Data ! Please wait</div>;
   }
-
   if (errorMsg !== null) {
-    return <div>Error Occurred! {errorMsg}</div>;
+    return <div>Error Occured ! {errorMsg} </div>;
   }
-
   return (
     <div className="container">
       <BsArrowLeftCircleFill
@@ -52,12 +49,14 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
       {images && images.length
         ? images.map((imageItem, index) => (
             <img
-              key={index}
+              key={imageItem}
               alt={imageItem.download_url}
               src={imageItem.download_url}
-              className={`current-image ${
-                index === currentSlide ? "visible" : ""
-              }`}
+              className={
+                currentSlide === index
+                  ? "current-image"
+                  : "current-image hide-current-image "
+              }
             />
           ))
         : null}
@@ -70,10 +69,13 @@ export default function ImageSlider({ url, limit = 5, page = 1 }) {
           ? images.map((_, index) => (
               <button
                 key={index}
-                className={`current-indicator ${
-                  index === currentSlide ? "active" : ""
-                }`}
-              />
+                className={
+                  currentSlide === index
+                    ? "current-indicator "
+                    : "current-indicator inactive-indicator  "
+                }
+                onClick={() => setCurrentSlide(index)}
+              ></button>
             ))
           : null}
       </span>

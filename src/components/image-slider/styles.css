@@ -24,9 +24,11 @@
 
 .arrow-left {
   left: 1rem;
+  cursor: pointer;
 }
 .arrow-right {
   right: 1rem;
+  cursor: pointer;
 }
 .circle-indicators {
   display: flex;
@@ -43,4 +45,11 @@
   outline: none;
   margin: 0 0.2rem;
   cursor: pointer;
+}
+.hide-current-image {
+  display: none;
+}
+
+.inactive-indicator {
+  background-color: gray;
 }

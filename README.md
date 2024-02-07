@@ -6,3 +6,4 @@
   - HEX
   - RGB
 - Star Rating
+- Image Slider
