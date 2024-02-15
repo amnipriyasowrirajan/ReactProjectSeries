@@ -9,3 +9,5 @@
 - Image Slider
 - Load more Data
 - Tree View
+- QR code
+  - Install npm i react-qr-code
