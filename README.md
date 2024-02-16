@@ -10,4 +10,7 @@
 - Load more Data
 - Tree View
 - QR code
+
   - Install npm i react-qr-code
+
+- Light-dark Theme Switch mode
