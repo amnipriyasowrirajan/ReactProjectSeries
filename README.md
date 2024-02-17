@@ -14,3 +14,5 @@
   - Install npm i react-qr-code
 
 - Light-dark Theme Switch mode
+
+- scroll indicator
