@@ -16,3 +16,5 @@
 - Light-dark Theme Switch mode
 
 - scroll indicator
+
+- Customs tabs Component
