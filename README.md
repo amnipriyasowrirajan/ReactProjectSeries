@@ -22,3 +22,7 @@
 - Modal Popup
 
 - Github Profile Finder
+
+- Search Autocomplete
+
+- Tic tac toe
