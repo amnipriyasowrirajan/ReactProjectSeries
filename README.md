@@ -32,3 +32,5 @@
 - Use custom hooks fetch Test
 
 - Use Onclick Outside hook Test
+
+- Use window resize hook test
